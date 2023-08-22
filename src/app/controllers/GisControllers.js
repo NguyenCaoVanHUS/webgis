@@ -1,10 +1,10 @@
 import course from "../models/course.js";
-class NewsController {
-    //GET /news
+class GisController {
+    //GET /gis
     server(req, res, next) {
         course.find()
             .then((courses) => {
-                res.render('news', {
+                res.render('gis', {
                     // title: 'TEST TITLE',
                     courses: courses,
                 })
@@ -13,10 +13,10 @@ class NewsController {
             .catch(next);
     };
 
-    //GET news/:slug
+    //GET gis/:slug
     show(req, res) {
         res.send('NEWS DETAIL!!!');
     };
 }
 
-export default new NewsController();
+export default new GisController();

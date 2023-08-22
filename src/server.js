@@ -2,6 +2,9 @@ import express from 'express';
 import morgan from 'morgan';
 import { engine } from 'express-handlebars';
 import route from './routes/index.js';
+import db from './config/db/mongodb.js';
+
+db.connect();
 
 const app = express();
 const port = 3001;
@@ -20,5 +23,5 @@ route(app);
 
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
+    console.log(`App listening on port ${port}`)
 });

@@ -1,10 +1,10 @@
 import express from 'express';
-import newsController from '../app/controllers/NewsControllers.js';
+import gisController from '../app/controllers/GisControllers.js';
 
 const router = express.Router();
 
-router.get('/:slug', newsController.show);
-router.get('/', newsController.server);
+router.get('/:slug', gisController.show);
+router.get('/', gisController.server);
 // từ trên xuống nếu để đầu thì sẽ lao vào luôn
 
 export default router;
