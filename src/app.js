@@ -20,8 +20,6 @@ app.set('views', 'src/resources/views');
 // Router init
 route(app);
 
-
-
 app.listen(port, () => {
     console.log(`App listening on port ${port}`)
 });

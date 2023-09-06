@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "description": "",
-  "main": "src/server.js",
+  "main": "src/app.js",
   "scripts": {
     "beautiful": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js.json,scss}'",
-    "start": "nodemon --inspect src/server.js",
+    "start": "nodemon --inspect src/app.js",
     "watch": "node-sass --watch src/resources/scss --output src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,6 +35,7 @@
     "express": "4.17.1",
     "express-handlebars": "^7.0.7",
     "mongoose": "^7.1.0",
-    "nodemon": "2.0.12"
+    "nodemon": "2.0.12",
+    "pg": "^8.11.3"
   }
 }

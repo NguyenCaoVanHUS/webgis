@@ -1,16 +1,7 @@
-import course from "../models/course.js";
 class NewsController {
     //GET /news
-    server(req, res, next) {
-        course.find()
-            .then((courses) => {
-                res.render('news', {
-                    // title: 'TEST TITLE',
-                    courses: courses,
-                })
-                // res.json(courses);
-            })
-            .catch(next);
+    app(req, res, next) {
+        res.render('news');
     };
 
     //GET news/:slug

@@ -1,11 +1,10 @@
-import course from "../models/course.js";
+import Course from "../models/Course.js";
 class GisController {
     //GET /gis
-    server(req, res, next) {
-        course.find()
+    app(req, res, next) {
+        Course.find()
             .then((courses) => {
                 res.render('gis', {
-                    // title: 'TEST TITLE',
                     courses: courses,
                 })
                 // res.json(courses);

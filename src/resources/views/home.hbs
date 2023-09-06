@@ -1,1 +1,20 @@
-<h1>HOME</h1>
+<h1>{{courses}}</h1>
+
+<div class="mt-4">
+    <div class="row">
+        {{#each courses}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card card-course-item">
+                <a href="/courses/{{this.slug}}">
+                    <img class="card-img-top" src="{{this.img}}" alt="{{this.img}}">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title" src="#">{{this.name}}</h5>
+                    <p class="card-text" src="#">{{this.description}}</p>
+                    <a href="#" class="btn btn-primary">Xem tin</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
