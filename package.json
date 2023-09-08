@@ -6,7 +6,7 @@
   "main": "src/app.js",
   "scripts": {
     "beautiful": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js.json,scss}'",
-    "start": "nodemon --inspect src/app.js",
+    "start": "nodemon --inspect --exec babel-node src/app.js",
     "watch": "node-sass --watch src/resources/scss --output src/public/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,8 +15,7 @@
     "url": "git+https://github.com/NguyenCaoVanHUS/nodejs_webapp.git"
   },
   "keywords": [
-    "webapp",
-    "gis"
+    "webgis"
   ],
   "author": "CaovanHUS",
   "license": "ISC",
@@ -25,6 +24,8 @@
   },
   "homepage": "https://github.com/NguyenCaoVanHUS/nodejs_webapp#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.15",
+    "@babel/preset-env": "^7.22.15",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "morgan": "^1.10.0",
